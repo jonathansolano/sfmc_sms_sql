@@ -6,6 +6,7 @@ select
       s.report_run_date as report_run_date,
       ss.single_send_count as single_send_count
 from
+/* The below subquery can be used within any data extension to find sms sent no matter the length of the SMS sent.*/
 (Select
     x.journeyname,
     x.ActivityName,
